@@ -1,9 +1,25 @@
 function addPlan() {
-    // Retrieve input values
-    var planName = document.getElementById("planName").value;
-    var date = document.getElementById("date").value;
-    var venue = document.getElementById("venue").value;
-    var extraInfo = document.getElementById("extraInfo").value;
+  var planName = document.getElementById('planName').value;
+  var date = document.getElementById('date').value;
+  var venue = document.getElementById('venue').value;
+  var extraInfo = document.getElementById('extraInfo').value;
+
+  // Save plan to Firestore
+  db.collection('plans').add({
+    planName: planName,
+    date: date,
+    venue: venue,
+    extraInfo: extraInfo
+  })
+  .then(function(docRef) {
+    console.log('Plan added with ID: ', docRef.id);
+    // Reset the form fields
+    document.getElementById('planForm').reset();
+  })
+  .catch(function(error) {
+    console.error('Error adding plan: ', error);
+  });
+}
 
     // Validate input values
     if (planName === "" || date === "" || venue === "") {
