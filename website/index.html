@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <title>PMKS Plans</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>PMKS Plans</h1>
+        </div>
+        <div class="content">
+            <div class="add-plan">
+                <h2>Add Plan</h2>
+                <form id="planForm">
+                    <label for="planName">Plan Name:</label>
+                    <input type="text" id="planName" required>
+                    <br>
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" required>
+                    <br>
+                    <label for="venue">Venue:</label>
+                    <input type="text" id="venue" required>
+                    <br>
+                    <label for="extraInfo">Extra Information:</label>
+                    <br>
+                    <textarea id="extraInfo" rows="4"></textarea>
+                    <br>
+                    <button type="button" onclick="addPlan()">Add Plan</button>
+                </form>
+            </div>
+            <div class="upcoming-plans">
+                <h2>Upcoming Plans</h2>
+                <table id="planTable">
+                    <tr>
+                        <th>Plan Name</th>
+                        <th>Date</th>
+                        <th>Venue</th>
+                    </tr>
+                </table>
+            </div> 
+        </div>
+    </div>
+           
+ <div class="group-photos">
+            <h2>Group Photos</h2>
+            <div id="photoContainer"></div>
+        </div>
+    </div>
+</div>
+</body>
+</body>
+</html>
