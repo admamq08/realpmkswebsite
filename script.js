@@ -69,5 +69,24 @@ var firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   var db = firebase.firestore();
-  
+  // Fetch plans from Firestore
+db.collection('plans').get().then(function(querySnapshot) {
+  querySnapshot.forEach(function(doc) {
+    var planData = doc.data();
+    // Render the plan in the UI
+    renderPlan(planData);
+  });
+});
+
+// Function to render a plan in the UI
+function renderPlan(planData) {
+  var planList = document.getElementById('planList');
+  var planItem = document.createElement('li');
+  planItem.innerHTML = `<strong>${planData.planName}</strong><br>
+                        Date: ${planData.date}<br>
+                        Venue: ${planData.venue}<br>
+                        Extra Information: ${planData.extraInfo}`;
+  planList.appendChild(planItem);
+}
+
 }
