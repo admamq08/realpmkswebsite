@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <title>PMKS Plans</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="container">
@@ -31,14 +34,23 @@
             </div>
             <div class="upcoming-plans">
                 <h2>Upcoming Plans</h2>
-                <ul id="planList"></ul>
-            </div>
+                <table id="planTable">
+                    <tr>
+                        <th>Plan Name</th>
+                        <th>Date</th>
+                        <th>Venue</th>
+                    </tr>
+                </table>
+            </div> 
         </div>
     </div>
-
-    <!-- Firebase JavaScript SDK -->
-    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js"></script>
-    <script src="script.js"></script>
+           
+ <div class="group-photos">
+            <h2>Group Photos</h2>
+            <div id="photoContainer"></div>
+        </div>
+    </div>
+</div>
+</body>
 </body>
 </html>
