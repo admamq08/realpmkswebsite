@@ -42,12 +42,13 @@ function addPhoto(photoUrl) {
     photoContainer.appendChild(photoElement);
 }
 var firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
+    apiKey: "AIzaSyAAtoGfOIAFPMPNeO4-P_ltVOG-TOdSlPo",
+    authDomain: "pmkswebsite.firebaseapp.com",
     projectId: "pmkswebsite",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
+    storageBucket: "pmkswebsite.appspot.com",
+    messagingSenderId: "958123421961",
+    appId: "1:958123421961:web:6b647b856d3906aeba63d8",
+    measurementId: "G-263N12B0QN"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
